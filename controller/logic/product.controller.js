@@ -1,9 +1,6 @@
 /** Dto */
 const productDto = require("../../model/dto/product.dto");
 
-
-
-
 exports.createProduct = (req, res, next) => {
     console.log(req.body);
     let prod = {
@@ -22,6 +19,9 @@ exports.createProduct = (req, res, next) => {
                 }
             );
         }
+        return res.status(201).json({
+            info: data
+        })
     });
 };
 
