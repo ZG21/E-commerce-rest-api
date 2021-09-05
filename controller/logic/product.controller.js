@@ -72,7 +72,7 @@ exports.getAll = (req, res, next) => {
 
 exports.getById = (req, res, next) => {
 
-    productDto.getById({ Id: req.params.idProduct }, (err, data) => {
+    productDto.getById({ _id: req.params.idProduct }, (err, data) => {
         if (err) {
             return res.status(400).json(
                 {
