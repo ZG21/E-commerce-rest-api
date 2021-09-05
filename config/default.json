@@ -1,0 +1,18 @@
+{
+    "db-connections": {
+        "mongodb": {
+            "host": "cluster0.2sxls.mongodb.net",
+            "user": "UserProg3",
+            "password": "manizales2021",
+            "dbname": "E-commerceDB"
+        }
+    },
+    "secretkeys": {
+        "cryptojs": "VjQqAvhU58"
+    },
+    "roles": {
+        "customer": 1,
+        "ventor": 2
+    },
+    "server-port": 3001
+}
