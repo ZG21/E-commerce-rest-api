@@ -5,6 +5,7 @@ const productDto = require("../../model/dto/product.dto");
 
 
 exports.createProduct = (req, res, next) => {
+    console.log(req.body);
     let prod = {
         idProduct: req.body.idProduct,
         name: req.body.name,
@@ -26,14 +27,14 @@ exports.createProduct = (req, res, next) => {
 
 exports.updateProduct = (req, res, next) => {
     let prod = {
-        idProduct: req.body.id,
+        idProduct: req.body.idProduct,
         name: req.body.name,
         price: req.body.price,
         existence: req.body.existence,
         calification: req.body.calification,
         discount: req.body.discount
     };
-    productDto.update({ _id: req.body.id }, prod, (err, data) => {
+    productDto.update({ _id: req.body.idProduct }, prod, (err, data) => {
         if (err) {
             return res.status(400).json(
                 {
@@ -89,7 +90,7 @@ exports.getById = (req, res, next) => {
 };
 
 exports.deleteProduct = () => {
-    productDto.delete({ _id: req.body.id }, (err, data) => {
+    productDto.delete({ _id: req.body.idProduct }, (err, data) => {
         if (err) {
             return res.status(400).json(
                 {

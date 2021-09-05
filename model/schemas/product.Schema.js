@@ -27,17 +27,15 @@ const productSchema = new mongoose.Schema({
     discount: {
         type: "Number",
         required: true
-    },
-    brand_id: {
+    }
+    /**brand_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "coll_brand",
-        required: true,
+        ref: "coll_brand"
     },
     category_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "coll_category",
-        required: true,
-    }
+        ref: "coll_category"
+    } */
 });
 /** Schema exportation */
 module.exports = productSchema;
